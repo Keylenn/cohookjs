@@ -4,14 +4,12 @@
   "workspaces": [
     "packages/*"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Keylenn/cohookjs.git"
+  },
   "scripts": {
     "lint": "eslint packages/*/src/**/* --ext .js,.ts,.tsx"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
   },
   "lint-staged": {
     "packages/*/src/**/*.{js,ts,tsx}": "eslint --fix"
