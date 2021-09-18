@@ -1,0 +1,29 @@
+{
+  "name": "cohook",
+  "version": "1.0.0",
+  "description": "> TODO: description",
+  "author": "hejilun <darklight_on@163.com>",
+  "homepage": "https://github.com/Keylenn/cohookjs#readme",
+  "license": "MIT",
+  "main": "lib/cohook.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Keylenn/cohookjs.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/Keylenn/cohookjs/issues"
+  },
+  "dependencies": {
+    "immer": "^9.0.6"
+  }
+}

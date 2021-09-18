@@ -28,6 +28,8 @@ module.exports = {
     "no-return-assign": "off",
     "no-console": "off",
     "no-redeclare": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-explicit-any": "off",
     "prettier/prettier": [
       "error",
       {
