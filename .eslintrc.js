@@ -37,4 +37,7 @@ module.exports = {
       },
     ],
   },
+  globals: {
+    immer: "readable",
+  },
 }
