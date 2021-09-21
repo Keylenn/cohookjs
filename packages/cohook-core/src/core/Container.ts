@@ -7,6 +7,7 @@ import {
   TargetMap,
   WrappedDataRef,
   TrackIdItem,
+  TriggerOption,
 } from "../types"
 
 let trackId = 0
@@ -15,23 +16,27 @@ let pathId = 0
 const CONTAINER_EFFECT_MAP = Symbol.for("CONTAINER_EFFECT_MAP")
 const TRACK_ID_MAP = Symbol.for("TRACK_ID_MAP")
 const PENDING_TRIGGER_EFFECT_SET = Symbol.for("PENDING_TRIGGER_EFFECT_SET")
+const TRIGGER_OPTION = Symbol.for("TRIGGER_OPTION")
 
 const WRAPPED_DATA_REF_EFFECT_KEY = "current"
 
 // 类型问题
 class Container<T> {
   wrappedDataRef: WrappedDataRef<T>;
-
   [CONTAINER_EFFECT_MAP]: Map<AnyObj, TargetMap>;
-
   [TRACK_ID_MAP]: Map<number, TrackIdItem>;
-
+  [TRIGGER_OPTION]: TriggerOption<T>;
   [PENDING_TRIGGER_EFFECT_SET]: Set<AnyFn>
 
   constructor(data: T) {
     this[CONTAINER_EFFECT_MAP] = new Map()
     this[TRACK_ID_MAP] = new Map()
     this[PENDING_TRIGGER_EFFECT_SET] = new Set()
+    this[TRIGGER_OPTION] = {
+      changedPatches: [],
+      prev: data,
+      next: null,
+    }
     this.wrappedDataRef = { current: data }
   }
 
@@ -198,7 +203,7 @@ class Container<T> {
 
   batchTriggerPendingEffects() {
     const trEffSet = this[PENDING_TRIGGER_EFFECT_SET]
-    trEffSet.forEach((effectHandler) => effectHandler?.())
+    trEffSet.forEach((effectHandler) => effectHandler?.(this[TRIGGER_OPTION]))
     trEffSet.clear()
   }
 
@@ -206,6 +211,11 @@ class Container<T> {
     changedPatches: Patch[],
     nextWrappedDataRef: WrappedDataRef<T>
   ) {
+    this[TRIGGER_OPTION] = {
+      changedPatches,
+      prev: this.wrappedDataRef.current,
+      next: nextWrappedDataRef.current,
+    }
     const handler = ({ path: changedPropPath }: Patch) => {
       const _changedPropPath = changedPropPath.slice()
 

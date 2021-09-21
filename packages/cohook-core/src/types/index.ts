@@ -34,10 +34,16 @@ export interface Base<T> {
   commit: (updater: Updater<T>) => T
 }
 
-export type PluginContext<T> = Base<T> &
+export type PluginContext<T = any> = Base<T> &
   Pick<Container<T>, "tryToTrackEffect" | "cleanUpEffect">
 
 export type Plugins<T> = Record<
   string,
   (this: PluginContext<T>, ...args: any) => any
 >
+
+export type TriggerOption<T> = {
+  changedPatches: any[]
+  prev: T
+  next: T | null
+}

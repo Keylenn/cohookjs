@@ -42,8 +42,8 @@ export default function createContainer(initialData: any, plugins?: any) {
   const bindPlugins: AnyObj = {}
   const context = {
     ...base,
-    tryToTrackEffect: container.tryToTrackEffect,
-    cleanUpEffect: container.cleanUpEffect,
+    tryToTrackEffect: container.tryToTrackEffect.bind(container),
+    cleanUpEffect: container.cleanUpEffect.bind(container),
   }
 
   try {
