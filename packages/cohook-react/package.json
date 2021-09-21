@@ -1,0 +1,45 @@
+{
+  "name": "@cohook/react",
+  "version": "0.1.0",
+  "description": "> TODO: description",
+  "author": "Keylenn <darklight_on@163.com>",
+  "homepage": "https://github.com/Keylenn/cohookjs#readme",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "umd:main": "dist/react.umd.production.min.js",
+  "unpkg": "dist/react.umd.production.min.js",
+  "jsdelivr": "dist/react.umd.production.min.js",
+  "jsnext:main": "dist/react.esm.production.min.js",
+  "module": "dist/react.esm.js",
+  "react-native": "dist/react.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "src",
+    "dist",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Keylenn/cohookjs.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "build": "tsdx build --format cjs,esm,umd"
+  },
+  "bugs": {
+    "url": "https://github.com/Keylenn/cohookjs/issues"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.22",
+    "react": "^17.0.2"
+  },
+  "dependencies": {
+    "@cohook/core": "^0.1.5"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17"
+  }
+}
