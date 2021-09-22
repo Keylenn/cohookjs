@@ -1,12 +1,12 @@
 import { default as createBaseContainer } from "@cohook/core"
 import useMapDataToStatePlugin from "./hooks/useMapDataToStatePlugin"
-import { ReactBase, Plugins } from "../types"
+import { PReactBase, Plugins } from "../types"
 
-export default function createContainer<T>(initialData: T): ReactBase<T>
+export default function createContainer<T>(initialData: T): PReactBase<T>
 export default function createContainer<T, P extends Plugins<T>>(
   initialData: T,
   plugins: P
-): ReactBase<T> & {
+): PReactBase<T> & {
   plugins: P
 }
 export default function createContainer(initialData: any, otherPlugins?: any) {
@@ -17,7 +17,7 @@ export default function createContainer(initialData: any, otherPlugins?: any) {
 
   const { useMapDataToStatePlugin: useMapDataToState, ...restPlugins } = plugins
 
-  const reactBase = {
+  const preactBase = {
     ...base,
     useMapDataToState,
   }
@@ -26,8 +26,8 @@ export default function createContainer(initialData: any, otherPlugins?: any) {
 
   return hasPlugins
     ? {
-        ...reactBase,
+        ...preactBase,
         plugins: restPlugins,
       }
-    : reactBase
+    : preactBase
 }

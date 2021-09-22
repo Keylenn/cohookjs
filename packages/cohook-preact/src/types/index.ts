@@ -10,7 +10,7 @@ interface UseMapDataToStatePlugin<T> {
 
 export type MapStateFn<D> = (data: D) => any
 
-export interface ReactBase<T> extends Base<T> {
+export interface PReactBase<T> extends Base<T> {
   useMapDataToState: UseMapDataToStatePlugin<T>
 }
 

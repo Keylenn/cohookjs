@@ -1,17 +1,17 @@
 {
-  "name": "@cohook/react",
-  "version": "0.1.1",
+  "name": "@cohook/preact",
+  "version": "0.1.0",
   "description": "> TODO: description",
   "author": "Keylenn <darklight_on@163.com>",
   "homepage": "https://github.com/Keylenn/cohookjs#readme",
   "license": "MIT",
   "main": "dist/index.js",
-  "umd:main": "dist/react.umd.production.min.js",
-  "unpkg": "dist/react.umd.production.min.js",
-  "jsdelivr": "dist/react.umd.production.min.js",
-  "jsnext:main": "dist/react.esm.production.min.js",
-  "module": "dist/react.esm.js",
-  "react-native": "dist/react.esm.js",
+  "umd:main": "dist/preact.umd.production.min.js",
+  "unpkg": "dist/preact.umd.production.min.js",
+  "jsdelivr": "dist/preact.umd.production.min.js",
+  "jsnext:main": "dist/preact.esm.production.min.js",
+  "module": "dist/preact.esm.js",
+  "react-native": "dist/preact.esm.js",
   "types": "dist/index.d.ts",
   "files": [
     "src",
@@ -33,14 +33,13 @@
     "url": "https://github.com/Keylenn/cohookjs/issues"
   },
   "devDependencies": {
-    "@types/react": "^17.0.22",
-    "react": "^17.0.2",
+    "preact": "^10.5.14",
     "tsdx": "^0.14.1"
   },
   "dependencies": {
     "@cohook/core": "^0.1.5"
   },
   "peerDependencies": {
-    "react": "^16.8.0 || ^17"
+    "preact": "^10"
   }
 }

@@ -1,10 +1,10 @@
-import * as React from "react"
+import { useEffect, useLayoutEffect } from "preact/hooks"
 
 const useIsomorphicLayoutEffect =
   typeof window !== "undefined" &&
   typeof window.document !== "undefined" &&
   typeof window.document.createElement !== "undefined"
-    ? React.useLayoutEffect
-    : React.useEffect
+    ? useLayoutEffect
+    : useEffect
 
 export default useIsomorphicLayoutEffect

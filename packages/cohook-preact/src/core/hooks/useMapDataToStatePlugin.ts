@@ -1,4 +1,4 @@
-import React from "react"
+import { useReducer } from "preact/hooks"
 import useIsomorphicLayoutEffect from "./useIsomorphicLayoutEffect"
 import { MapStateFn, PluginContext } from "../../types"
 
@@ -6,7 +6,7 @@ export default function useMapDataToStatePlugin<T = any>(
   this: PluginContext<T>,
   mapStateFn?: MapStateFn<T>
 ) {
-  const [, forceRender] = React.useReducer((s) => s + 1, 0)
+  const [, forceRender] = useReducer((s) => s + 1, 0)
 
   useIsomorphicLayoutEffect(() => {
     const res = this.tryToTrackEffect({
