@@ -1,0 +1,45 @@
+{
+  "name": "@cohook/vue3",
+  "version": "0.1.0",
+  "description": "> TODO: description",
+  "author": "hejilun <darklight_on@163.com>",
+  "homepage": "https://github.com/Keylenn/cohookjs#readme",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "umd:main": "dist/vue3.umd.production.min.js",
+  "unpkg": "dist/vue3.umd.production.min.js",
+  "jsdelivr": "dist/vue3.umd.production.min.js",
+  "jsnext:main": "dist/vue3.esm.production.min.js",
+  "module": "dist/vue3.esm.js",
+  "react-native": "dist/vue3.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "src",
+    "dist",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Keylenn/cohookjs.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "build": "tsdx build --format cjs,esm,umd"
+  },
+  "bugs": {
+    "url": "https://github.com/Keylenn/cohookjs/issues"
+  },
+  "devDependencies": {
+    "tsdx": "^0.14.1",
+    "vue": "3.0.4"
+  },
+  "dependencies": {
+    "@cohook/core": "^0.1.5"
+  },
+  "peerDependencies": {
+    "vue": "^3"
+  }
+}

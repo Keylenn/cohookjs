@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "downlevelIteration": true,
+    "sourceMap": true,
+    "alwaysStrict": true,
+    "strict": true,
+    "removeComments": true,
+    "declaration": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noImplicitAny": true,
+    "noImplicitThis": false,
+    "jsx": "react",
+    "esModuleInterop": true
+  },
+  "exclude": ["__tests__"]
+}
