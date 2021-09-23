@@ -2,6 +2,7 @@
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",
+    "lib": ["esnext"],
     "moduleResolution": "node",
     "downlevelIteration": true,
     "sourceMap": true,

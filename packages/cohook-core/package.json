@@ -1,0 +1,48 @@
+{
+  "name": "@cohook/core",
+  "version": "0.1.5-alpha.0",
+  "description": "Framework-independent, lightweight, progressive data management",
+  "author": "keylenn <darklight_on@163.com>",
+  "homepage": "https://github.com/Keylenn/cohookjs#readme",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "umd:main": "dist/core.umd.production.min.js",
+  "unpkg": "dist/core.umd.production.min.js",
+  "jsdelivr": "dist/core.umd.production.min.js",
+  "jsnext:main": "dist/core.esm.production.min.js",
+  "module": "dist/core.esm.js",
+  "react-native": "dist/core.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "src",
+    "dist",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Keylenn/cohookjs.git"
+  },
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "test": "tsdx test",
+    "build": "tsdx build --format cjs,esm,umd",
+    "lint": "eslint src --ext js,ts",
+    "prerelease": "standard-version --prerelease alpha",
+    "release": "yarn lint &&  yarn test && yarn build && standard-version && npm publish"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "bugs": {
+    "url": "https://github.com/Keylenn/cohookjs/issues"
+  },
+  "dependencies": {
+    "immer": "^9.0.6",
+    "standard-version": "^9.3.1"
+  },
+  "devDependencies": {
+    "tsdx": "^0.14.1"
+  }
+}
