@@ -8,6 +8,7 @@ import {
   WrappedDataRef,
   TrackIdItem,
   TriggerOption,
+  TrackOption,
 } from "../types"
 
 let trackId = 0
@@ -146,13 +147,7 @@ class Container<T> {
     })
   }
 
-  tryToTrackEffect({
-    mapFn,
-    effectHook,
-  }: {
-    mapFn?: (data: T) => any
-    effectHook: (option: TriggerOption<T>) => any
-  }) {
+  tryToTrackEffect({ mapFn, effectHook }: TrackOption<T>) {
     try {
       // track
       const option = {

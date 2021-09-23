@@ -46,8 +46,13 @@ export type TransformPlugins<P extends Plugins<any>> = {
   [K in keyof P]: OmitThisParameter<P[K]>
 }
 
-export type TriggerOption<T> = {
+export interface TriggerOption<T> {
   changedPatches: any[]
   prev: T
   next: T | null
+}
+
+export interface TrackOption<T> {
+  effectHook: (option: TriggerOption<T>) => any
+  mapFn?: (data: T) => any
 }
