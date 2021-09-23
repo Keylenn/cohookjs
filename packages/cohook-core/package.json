@@ -1,7 +1,7 @@
 {
   "name": "@cohook/core",
   "version": "0.1.5-alpha.0",
-  "description": "Framework-independent, lightweight, progressive data management",
+  "description": "Framework-independent, lightweight, progressive, immutable data management",
   "author": "keylenn <darklight_on@163.com>",
   "homepage": "https://github.com/Keylenn/cohookjs#readme",
   "license": "MIT",
