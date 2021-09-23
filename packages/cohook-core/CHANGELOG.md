@@ -4,9 +4,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [1.0.0-alpha.1](https://github.com/Keylenn/cohookjs/compare/v1.1.0-alpha.0...v1.0.0-alpha.1) (2021-09-23)
 
-## 1.1.0-alpha.0 (2021-09-23)
-
-
 ### ♻️ Code Refactoring | 代码重构
 
 * rename core package ([7ff5546](https://github.com/Keylenn/cohookjs/commit/7ff5546b734490eac2f038669a6a4795aecddbaf))
