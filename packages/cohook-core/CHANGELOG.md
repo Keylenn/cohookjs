@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-beta.1](https://github.com/Keylenn/cohookjs/compare/v1.0.0-beta.0...v1.0.0-beta.1) (2021-09-25)
+
+
+### 🐛 Bug Fixes | Bug 修复
+
+* change immer export way ([65cae62](https://github.com/Keylenn/cohookjs/commit/65cae628be051d3add6712977f1e107785210a32))
+
 ## [1.0.0-beta.0](https://github.com/Keylenn/cohookjs/compare/v1.0.0-alpha.1...v1.0.0-beta.0) (2021-09-25)
 
 
