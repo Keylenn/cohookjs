@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0-beta.0](https://github.com/Keylenn/cohookjs/compare/v0.9.10-alpha.0...v1.1.0-beta.0) (2021-09-25)
+
+
+### ✨ Features | 新功能
+
+* init ([82b111c](https://github.com/Keylenn/cohookjs/commit/82b111c1e83892d82413e017025bc7db74e85d03))
+
+
+### ✏️ Documentation | 文档
+
+* add README ([b089bf0](https://github.com/Keylenn/cohookjs/commit/b089bf056d1f9eff2c820e8ac06cd2c1e5a6548c))
+
 ### 0.9.10-alpha.0 (2021-09-25)
 
 
