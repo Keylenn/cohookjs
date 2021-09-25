@@ -14,4 +14,4 @@ export interface PReactBase<T> extends Base<T> {
   useMapDataToState: UseMapDataToStatePlugin<T>
 }
 
-export { PluginContext, Plugins } from "@cohook/core"
+export { PluginContext, Plugins, TransformPlugins } from "@cohook/core"
