@@ -2,7 +2,7 @@ import createContainer from "./core/createContainer"
 
 export * from "./types"
 
-export * as immer from "immer"
+export { immer } from "@cohook/core"
 
 export { createContainer }
 export default createContainer
