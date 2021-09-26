@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0-beta.1](https://github.com/Keylenn/cohookjs/compare/v1.1.0-beta.0...v1.1.0-beta.1) (2021-09-26)
+
+
+### ✅ Tests | 测试
+
+* add test case ([e6f485e](https://github.com/Keylenn/cohookjs/commit/e6f485e7c89e7dac2958012f24c0c8562598ba5d))
+
 ## 1.1.0-beta.0 (2021-09-26)
 
 
