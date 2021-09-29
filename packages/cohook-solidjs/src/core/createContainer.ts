@@ -1,43 +1,19 @@
-import { default as createBaseContainer, AnyFn } from "@cohook/core"
-import { SolidBase, Plugins, TransformPlugins } from "../types"
+import { SolidBase } from "../types"
 import { createStore, produce } from "solid-js/store"
-import cloneDeep from "lodash-es/cloneDeep"
 
 export default function createContainer<T>(initialData: T): SolidBase<T>
-export default function createContainer<T, P extends Plugins<T>>(
-  initialData: T,
-  plugins: P
-): SolidBase<T> & {
-  plugins: TransformPlugins<P>
-}
-export default function createContainer<T>(initialData: T, plugins?: any) {
-  const { plugins: basePlugins, ...base } = createBaseContainer(
-    initialData,
-    plugins
-  )
-  const dataCopy: any = cloneDeep({ current: base.getData() })
-  const [observableData, setObservableData] = createStore(dataCopy) as any
+export default function createContainer(initialData: any) {
+  const [observableData, setObservableData] = createStore({
+    current: initialData,
+  }) as any
 
-  const commit = (updater: AnyFn) => {
-    const a = produce(updater)
-    typeof a === "function" && setObservableData(a as AnyFn)
-    return base.commit(updater)
+  const commit = (updater: any) => {
+    setObservableData(produce(updater))
+    return observableData.current
   }
 
-  const useMapDataToObservable = () => observableData.current
-
-  const solidBase = {
-    ...base,
+  return {
     commit,
-    useMapDataToObservable,
+    useMapDataToObservable: () => observableData.current,
   }
-
-  const hasPlugins = basePlugins && Object.keys(basePlugins).length
-
-  return hasPlugins
-    ? {
-        ...solidBase,
-        plugins: basePlugins,
-      }
-    : solidBase
 }

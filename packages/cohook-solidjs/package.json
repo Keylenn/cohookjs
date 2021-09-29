@@ -1,7 +1,7 @@
 {
   "name": "@cohook/solid-js",
   "version": "0.1.0",
-  "description": "> TODO: description",
+  "description": "Solid-js lightweight, progressive data caching and cross-component communication",
   "author": "Keylenn <darklight_on@163.com>",
   "homepage": "https://github.com/Keylenn/cohookjs#readme",
   "license": "MIT",
@@ -22,7 +22,13 @@
     "type": "git",
     "url": "git+https://github.com/Keylenn/cohookjs.git"
   },
-  "keywords": [],
+  "keywords": [
+    "solid-js",
+    "cohook",
+    "immutable",
+    "container",
+    "effect"
+  ],
   "engines": {
     "node": ">=10"
   },

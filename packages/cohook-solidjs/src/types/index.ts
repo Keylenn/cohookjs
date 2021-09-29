@@ -1,12 +1,11 @@
-import { Base } from "@cohook/core"
+import { Updater } from "@cohook/core"
 import type { Store } from "solid-js/store"
-
-interface UseMapDataToObservable<T> {
-  (): Store<T>
+export interface SolidBase<T> {
+  useMapDataToObservable: () => Store<T>
+  commit: (updater: Updater<T>) => T
 }
-
-export interface SolidBase<T> extends Base<T> {
-  useMapDataToObservable: UseMapDataToObservable<T>
+export interface SolidWithPlugins<T> extends SolidBase<T> {
+  getData: () => T
 }
 
 export { PluginContext, Plugins, TransformPlugins } from "@cohook/core"
