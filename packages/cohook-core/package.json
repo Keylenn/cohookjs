@@ -6,12 +6,9 @@
   "homepage": "https://github.com/Keylenn/cohookjs/tree/master/packages/cohook-core#readme",
   "license": "MIT",
   "main": "dist/index.js",
+  "module": "dist/core.esm.js",
   "umd:main": "dist/core.umd.production.min.js",
   "unpkg": "dist/core.umd.production.min.js",
-  "jsdelivr": "dist/core.umd.production.min.js",
-  "jsnext:main": "dist/core.esm.production.min.js",
-  "module": "dist/core.esm.js",
-  "react-native": "dist/core.esm.js",
   "types": "dist/index.d.ts",
   "sideEffects": false,
   "files": [
@@ -59,13 +56,14 @@
       "limit": "10 KB"
     }
   ],
-  "dependencies": {
-    "immer": "^9.0.6"
-  },
   "devDependencies": {
     "@size-limit/preset-small-lib": "^5.0.4",
+    "immer": "^9.0.6",
     "size-limit": "^5.0.4",
     "standard-version": "^9.3.1",
     "tsdx": "^0.14.1"
+  },
+  "peerDependencies": {
+    "immer": "^9"
   }
 }

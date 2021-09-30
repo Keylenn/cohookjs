@@ -5,16 +5,16 @@
 ## ✨特性
 + 读写分离，自定义Action去处理数据，灵活化组装实现逻辑复用
 + 轻量，API简单化，类型提示友好
-+ 数据不可变
++ 数据不可变, 使用immer管理数据
 + 支持插件化拓展功能
 
 ## 📦 安装
 ```sh
-yarn add @cohook/core
+yarn add @cohook/core immer
 ```
 
 ```sh
-npm i @cohook/core
+npm i @cohook/core immer
 ```
 
 ## 💡API
