@@ -10,7 +10,7 @@ interface UseMapDataToAccessorPlugin<T> {
 
 export type MapStateFn<D> = (data: D) => any
 
-export interface ReactBase<T> extends Base<T> {
+export interface Vue3Base<T> extends Base<T> {
   useMapDataToAccessor: UseMapDataToAccessorPlugin<T>
 }
 

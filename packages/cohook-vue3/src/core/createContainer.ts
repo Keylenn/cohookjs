@@ -1,12 +1,12 @@
 import { default as createBaseContainer } from "@cohook/core"
 import useMapDataToAccessorPlugin from "./useMapDataToAccessorPlugin"
-import { ReactBase, Plugins, TransformPlugins } from "../types"
+import { Vue3Base, Plugins, TransformPlugins } from "../types"
 
-export default function createContainer<T>(initialData: T): ReactBase<T>
+export default function createContainer<T>(initialData: T): Vue3Base<T>
 export default function createContainer<T, P extends Plugins<T>>(
   initialData: T,
   plugins: P
-): ReactBase<T> & {
+): Vue3Base<T> & {
   plugins: TransformPlugins<P>
 }
 export default function createContainer(initialData: any, otherPlugins?: any) {
@@ -18,7 +18,7 @@ export default function createContainer(initialData: any, otherPlugins?: any) {
   const { useMapDataToAccessorPlugin: useMapDataToAccessor, ...restPlugins } =
     plugins
 
-  const reactBase = {
+  const Vue3Base = {
     ...base,
     useMapDataToAccessor,
   }
@@ -27,8 +27,8 @@ export default function createContainer(initialData: any, otherPlugins?: any) {
 
   return hasPlugins
     ? {
-        ...reactBase,
+        ...Vue3Base,
         plugins: restPlugins,
       }
-    : reactBase
+    : Vue3Base
 }
