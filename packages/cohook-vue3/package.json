@@ -1,43 +1,71 @@
 {
   "name": "@cohook/vue3",
-  "version": "0.1.0",
-  "description": "> TODO: description",
+  "version": "1.0.0-alpha.0",
+  "description": "Vue3 lightweight, progressive data caching and cross-component communication",
   "author": "hejilun <darklight_on@163.com>",
-  "homepage": "https://github.com/Keylenn/cohookjs#readme",
+  "homepage": "https://github.com/Keylenn/cohookjs/tree/master/packages/cohook-vue3#readme",
   "license": "MIT",
   "main": "dist/index.js",
   "umd:main": "dist/vue3.umd.production.min.js",
   "unpkg": "dist/vue3.umd.production.min.js",
-  "jsdelivr": "dist/vue3.umd.production.min.js",
-  "jsnext:main": "dist/vue3.esm.production.min.js",
   "module": "dist/vue3.esm.js",
-  "react-native": "dist/vue3.esm.js",
   "types": "dist/index.d.ts",
   "files": [
     "src",
-    "dist",
-    "README.md"
+    "dist"
   ],
-  "publishConfig": {
-    "access": "public"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Keylenn/cohookjs.git"
   },
+  "keywords": [
+    "vue3",
+    "cohook",
+    "immer",
+    "immutable",
+    "container",
+    "effect"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1",
-    "build": "tsdx build --format cjs,esm,umd"
+    "test": "tsdx test",
+    "build": "tsdx build --format cjs,esm,umd",
+    "build:check": "yarn lint && yarn test && yarn build && yarn size",
+    "lint": "eslint src --ext js,ts",
+    "size": "size-limit",
+    "analyze": "size-limit --why",
+    "release:alpha": "yarn build:check && standard-version --prerelease alpha && npm publish",
+    "release:beta": "yarn build:check && standard-version --prerelease beta && npm publish",
+    "release": "yarn build:check && standard-version && npm publish"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "bugs": {
     "url": "https://github.com/Keylenn/cohookjs/issues"
   },
+  "size-limit": [
+    {
+      "path": "dist/vue3.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/vue3.esm.js",
+      "limit": "10 KB"
+    }
+  ],
   "devDependencies": {
-    "tsdx": "^0.14.1",
-    "vue": "3.0.4"
+    "vue": "3.0.4",
+    "@size-limit/preset-small-lib": "^5.0.4",
+    "size-limit": "^5.0.4",
+    "standard-version": "^9.3.1",
+    "tsdx": "^0.14.1"
   },
   "dependencies": {
-    "@cohook/core": "^0.1.5"
+    "@cohook/core": "^1.0.0",
+    "immer": "^9.0.6"
   },
   "peerDependencies": {
     "vue": "^3"
