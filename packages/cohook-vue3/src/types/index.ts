@@ -14,4 +14,4 @@ export interface ReactBase<T> extends Base<T> {
   useMapDataToAccessor: UseMapDataToAccessorPlugin<T>
 }
 
-export { PluginContext, Plugins } from "@cohook/core"
+export { PluginContext, Plugins, TransformPlugins } from "@cohook/core"
