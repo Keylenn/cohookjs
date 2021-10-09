@@ -1,6 +1,6 @@
 {
   "name": "@cohook/vue3",
-  "version": "1.0.0-alpha.0",
+  "version": "1.0.0-alpha.1",
   "description": "Vue3 lightweight, progressive data caching and cross-component communication",
   "author": "hejilun <darklight_on@163.com>",
   "homepage": "https://github.com/Keylenn/cohookjs/tree/master/packages/cohook-vue3#readme",
