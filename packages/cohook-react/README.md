@@ -2,6 +2,22 @@
 
 React 轻量级、渐进式数据缓存和跨组件通信方案
 
+<table>
+  <thead>
+    <tr>
+      <th colspan="3">🎯 案例🎯</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://codesandbox.io/s/cohook-react-counter-dmry3" rel="nofollow">Counter</a></td>
+      <td><a href="https://codesandbox.io/s/cohook-react-i18n-jtiel" rel="nofollow">I18n</a></td>
+      <td><a href="https://codesandbox.io/s/cohook-react-todos-mqo55" rel="nofollow">Todos</a></td>
+    </tr>
+  </tbody>
+</table>
+<br />
+
 ## ✨特性
 + 支持数据缓存和共享
 + 支持数据状态化，自动跟踪变化并更新，精准定位作用区间
