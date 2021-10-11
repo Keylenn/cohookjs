@@ -1,6 +1,6 @@
 {
   "name": "@cohook/preact",
-  "version": "1.1.0-beta.1",
+  "version": "1.0.0",
   "description": "preact lightweight, progressive data caching and cross-component communication",
   "author": "Keylenn <darklight_on@163.com>",
   "homepage": "https://github.com/Keylenn/cohookjs/tree/master/packages/cohook-preact#readme",
@@ -8,10 +8,7 @@
   "main": "dist/index.js",
   "umd:main": "dist/preact.umd.production.min.js",
   "unpkg": "dist/preact.umd.production.min.js",
-  "jsdelivr": "dist/preact.umd.production.min.js",
-  "jsnext:main": "dist/preact.esm.production.min.js",
   "module": "dist/preact.esm.js",
-  "react-native": "dist/preact.esm.js",
   "types": "dist/index.d.ts",
   "sideEffects": false,
   "files": [
@@ -69,7 +66,8 @@
     "tsdx": "^0.14.1"
   },
   "dependencies": {
-    "@cohook/core": "1.0.0-beta.1"
+    "@cohook/core": "^1.0.0",
+    "immer": "^9.0.6"
   },
   "peerDependencies": {
     "preact": "^10"
