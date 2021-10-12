@@ -14,6 +14,6 @@ export default function createContainer(initialData: any) {
 
   return {
     commit,
-    useMapDataToObservable: () => observableData.current,
+    useMapDataToAccessor: () => () => observableData.current,
   }
 }

@@ -929,6 +929,11 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
+"@cohook/core@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@cohook/core/-/core-1.0.0.tgz#841375697418fe6193ef4e4ef5ccd5248cb69fef"
+  integrity sha512-Y2YFJdbmnVPIWooQzRxDnezHUBN3AF00TW1qgriUZEJ0NxGHilKdv1oHTR43fLqMNCv7WoSHzhqSDQt3SS8O9A==
+
 "@commitlint/cli@^13.1.0":
   version "13.1.0"
   resolved "https://registry.yarnpkg.com/@commitlint/cli/-/cli-13.1.0.tgz#3608bb24dbef41aaa0729ffe65c7f9b57409626a"

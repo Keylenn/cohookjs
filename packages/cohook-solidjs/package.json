@@ -1,17 +1,14 @@
 {
   "name": "@cohook/solid-js",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Solid-js lightweight, progressive data caching and cross-component communication",
   "author": "Keylenn <darklight_on@163.com>",
-  "homepage": "https://github.com/Keylenn/cohookjs#readme",
+  "homepage": "https://github.com/Keylenn/cohookjs/tree/master/packages/cohook-solidjs#readme",
   "license": "MIT",
   "main": "dist/index.js",
   "umd:main": "dist/solid-js.umd.production.min.js",
   "unpkg": "dist/solid-js.umd.production.min.js",
-  "jsdelivr": "dist/solid-js.umd.production.min.js",
-  "jsnext:main": "dist/solid-js.esm.production.min.js",
   "module": "dist/solid-js.esm.js",
-  "react-native": "dist/solid-js.esm.js",
   "types": "dist/index.d.ts",
   "sideEffects": false,
   "files": [
@@ -67,7 +64,8 @@
     "tsdx": "^0.14.1"
   },
   "dependencies": {
-    "@cohook/core": "^1.0.0-beta.1",
+    "@cohook/core": "^1.0.0",
+    "immer": "^9.0.6",
     "lodash-es": "^4.17.21"
   },
   "peerDependencies": {
