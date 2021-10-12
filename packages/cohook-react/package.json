@@ -1,0 +1,80 @@
+{
+  "name": "@cohook/react",
+  "version": "1.1.0-beta.0",
+  "description": "React lightweight, progressive data caching and cross-component communication",
+  "author": "Keylenn <darklight_on@163.com>",
+  "homepage": "https://github.com/Keylenn/cohookjs/tree/master/packages/cohook-react#readme",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "umd:main": "dist/react.umd.production.min.js",
+  "unpkg": "dist/react.umd.production.min.js",
+  "jsdelivr": "dist/react.umd.production.min.js",
+  "jsnext:main": "dist/react.esm.production.min.js",
+  "module": "dist/react.esm.js",
+  "react-native": "dist/react.esm.js",
+  "types": "dist/index.d.ts",
+  "sideEffects": false,
+  "files": [
+    "src",
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Keylenn/cohookjs.git"
+  },
+  "keywords": [
+    "React",
+    "React Hooks",
+    "cohook",
+    "immutable",
+    "container",
+    "effect"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "test": "tsdx test",
+    "build": "tsdx build --format cjs,esm,umd",
+    "build:check": "yarn lint && yarn test && yarn build && yarn size",
+    "lint": "eslint src --ext js,ts",
+    "size": "size-limit",
+    "analyze": "size-limit --why",
+    "release:alpha": "yarn build:check && standard-version --prerelease alpha && npm publish",
+    "release:beta": "yarn build:check && standard-version --prerelease beta && npm publish",
+    "release": "yarn build:check && standard-version && npm publish"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "bugs": {
+    "url": "https://github.com/Keylenn/cohookjs/issues"
+  },
+  "size-limit": [
+    {
+      "path": "dist/react.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/react.esm.js",
+      "limit": "10 KB"
+    }
+  ],
+  "devDependencies": {
+    "@size-limit/preset-small-lib": "^5.0.4",
+    "@testing-library/react": "^12.1.0",
+    "@types/react": "^17.0.22",
+    "@types/react-dom": "^17.0.9",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "size-limit": "^5.0.4",
+    "standard-version": "^9.3.1",
+    "tsdx": "^0.14.1"
+  },
+  "dependencies": {
+    "@cohook/core": "1.0.0-beta.1"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17"
+  }
+}
