@@ -2,19 +2,7 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-## [1.1.0-alpha.1](https://github.com/Keylenn/cohookjs/compare/v1.0.0-beta.1...v1.1.0-alpha.1) (2021-10-23)
-
-
-### ♻️ Code Refactoring | 代码重构
-
-* change immer as peerDependencies instead of dependencies ([d6cb878](https://github.com/Keylenn/cohookjs/commit/d6cb8787057bb95a38d81bf7b58abe3b4fbf182f))
-
-
-### 🚀 Chore | 构建/工程依赖/工具
-
-* fix version ([596a8ae](https://github.com/Keylenn/cohookjs/commit/596a8ae31bfea267617fb6b2dd65226c552713ed))
-* **release:** 1.1.0-alpha.0 ([2749727](https://github.com/Keylenn/cohookjs/commit/27497274a7bbd7335de40c0cf388fdf754a10929))
-
+## [1.2.0-alpha.0](https://github.com/Keylenn/cohookjs/compare/v1.0.0-beta.1...v1.1.0-alpha.1) (2021-10-23)
 
 ### ✨ Features | 新功能
 
