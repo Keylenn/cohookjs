@@ -1,6 +1,6 @@
 {
   "name": "@cohook/core",
-  "version": "1.2.0-alpha.0",
+  "version": "1.2.1",
   "description": "Framework-independent, lightweight, progressive, immutable data management",
   "author": "keylenn <darklight_on@163.com>",
   "homepage": "https://github.com/Keylenn/cohookjs/tree/master/packages/cohook-core#readme",

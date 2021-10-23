@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.1](https://github.com/Keylenn/cohookjs/compare/v1.1.0-alpha.1...v1.2.1) (2021-10-23)
+
+
+### 🚀 Chore | 构建/工程依赖/工具
+
+* change version ([e95f75b](https://github.com/Keylenn/cohookjs/commit/e95f75b9f3e992475e3ef020eb2fa1fb9a6b096a))
+
+
+### ✏️ Documentation | 文档
+
+* add shareOption Api ([766826a](https://github.com/Keylenn/cohookjs/commit/766826a0783db2f90d7f3f5867e1192a968a79c6))
+
 ## [1.2.0-alpha.0](https://github.com/Keylenn/cohookjs/compare/v1.0.0-beta.1...v1.1.0-alpha.1) (2021-10-23)
 
 ### ✨ Features | 新功能
