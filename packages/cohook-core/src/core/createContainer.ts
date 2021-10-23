@@ -1,5 +1,11 @@
 import Container from "./Container"
-import { Base, AnyObj, Plugins, TransformPlugins } from "../types"
+import {
+  Base,
+  AnyObj,
+  ShareOption,
+  PluginOption,
+  TransformPlugins,
+} from "../types"
 import { produceWithPatches, enablePatches, setAutoFreeze } from "immer"
 
 enablePatches()
@@ -7,14 +13,34 @@ enablePatches()
 setAutoFreeze(false)
 
 export default function createContainer<T>(initialData: T): Base<T>
-export default function createContainer<T, P extends Plugins<T>>(
+export default function createContainer<T, U extends ShareOption<T>>(
   initialData: T,
-  plugins: P
+  option: U
+): Base<T>
+export default function createContainer<
+  T,
+  O extends ShareOption<T> & PluginOption<T>
+>(
+  initialData: T,
+  option: O
 ): Base<T> & {
-  plugins: TransformPlugins<P>
+  plugins: TransformPlugins<O["plugins"]>
 }
-export default function createContainer(initialData: any, plugins?: any) {
-  const container = new Container(initialData)
+export default function createContainer(
+  initialData: any,
+  { plugins, shareProvider, shareConsumer }: any = {}
+) {
+  let container = null as unknown as Container<any>
+
+  const sharedContainer = shareConsumer?.()
+  // check sharedContainer valid
+  if (sharedContainer?.wrappedDataRef && sharedContainer?.tryToTrackEffect) {
+    container = sharedContainer
+  }
+
+  if (container === null) container = new Container(initialData)
+
+  shareProvider?.(container)
 
   const base = {
     getData: () => container.wrappedDataRef.current,
@@ -36,6 +62,7 @@ export default function createContainer(initialData: any, plugins?: any) {
       }
     },
   }
+
   const hasPlugins = plugins && Object.keys(plugins).length
   if (!hasPlugins) return base
 

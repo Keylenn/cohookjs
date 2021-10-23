@@ -46,6 +46,14 @@ export type TransformPlugins<P extends Plugins<any>> = {
   [K in keyof P]: OmitThisParameter<P[K]>
 }
 
+export interface ShareOption<T> {
+  shareProvider?: (container: Container<T>) => void
+  shareConsumer?: () => Container<T>
+}
+export interface PluginOption<T> {
+  plugins: Plugins<T>
+}
+
 export interface TriggerOption<T> {
   changedPatches: any[]
   prev: T
