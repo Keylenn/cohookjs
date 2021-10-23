@@ -19,15 +19,15 @@ npm i @cohook/core immer
 
 ## 💡API
 
-### ```createContainer(initialData [, pluginsOption])```
-createContainer作为容器工厂函数，接收初始数据`initialData`和可选的插件配置[`pluginsOption`](#pluginsoption)，返回一个容器对象[`container`](#container)。
+### ```createContainer(initialData [, option])```
+createContainer作为容器工厂函数，接收初始数据`initialData`和可选的插件选项[`pluginsOption`](#pluginsoption)和共享选项[`shareOption`](#shareoption)等配置，返回一个容器对象[`container`](#container)。
 
 #### `pluginsOption`
-插件配置是一个对象，`key`为插件名，`value`为插件方法具体实现。
+插件选项是一个对象，`key`为插件名，`value`为插件方法具体实现。
 
 ⚠️ 为了插件的更简便实现，改写了插件方法的[`this`](#this)参数，因此插件方法不能用[箭头函数](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
 
-- #### `this: PluginContext<T>`
+- ##### `this: PluginContext<T>`
 
 | 属性 | 说明 | 类型`(T为容器数据的类型)` |
 | -- | -- | -- |
@@ -49,6 +49,32 @@ function loggerPlugin() {
 ```
 
 + [useMapDataToStatePlugin](https://github.com/Keylenn/cohookjs/blob/cohook-react/packages/cohook-react/src/core/hooks/useMapDataToStatePlugin.ts)
+
+
+#### `shareOption`
+共享选项配置常用于跨应用(或窗口)共享容器，包括提供者`shareProvider`和消费者`shareConsumer`两个配置:
+
+| 属性 | 说明 | 类型`(T为容器数据的类型)` |
+| -- | -- | -- |
+| shareProvider | 共享容器的提供者，常用于缓存容器 | (container: Container<T>) => void |
+| shareConsumer | 共享容器的消费者，用于查找缓存的容器 | () => Container<T> |
+
+🌰
+
+```ts
+// 跨iframe共享容器
+const getSharedOption: () => ShareOption<T> = () => {
+  const scopeName = Symbol.for('__scopeName__')
+
+  return window.top === window ? {
+    shareProvider: container => window[scopeName] = container
+  } : {
+    shareConsumer: () => window.top[scopeName]
+  }
+}
+
+const container = createContainer(initialData,  getSharedOption())
+```
 
 #### `container`
 

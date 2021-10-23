@@ -2,6 +2,33 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.1](https://github.com/Keylenn/cohookjs/compare/v1.1.0-alpha.1...v1.2.1) (2021-10-23)
+
+### 💄 Styles | 风格
+
+### 🚀 Chore | 构建/工程依赖/工具
+
+* change version ([e95f75b](https://github.com/Keylenn/cohookjs/commit/e95f75b9f3e992475e3ef020eb2fa1fb9a6b096a))
+
+* add .gitignore ([5ef92ca](https://github.com/Keylenn/cohookjs/commit/5ef92ca43327bf7bf6d43e86758d88a3e95d2d2a))
+* add keywords ([ef4fd50](https://github.com/Keylenn/cohookjs/commit/ef4fd50d040628289ea6b8a95ee2daa462265f4e))
+* eslint ([4d56e5f](https://github.com/Keylenn/cohookjs/commit/4d56e5f0a0b1a99bb787e9152c9dae06169682fe))
+* fix husky-v7 config ([b1630d6](https://github.com/Keylenn/cohookjs/commit/b1630d6b1887d3ca29579e54319cd2818d39ba1e))
+* **release:** 0.1.5-alpha.0 ([e0a7689](https://github.com/Keylenn/cohookjs/commit/e0a768914996ef78baff9a4e6d240f2391a632fd))
+* **release:** 1.0.0-alpha.1 ([34afa38](https://github.com/Keylenn/cohookjs/commit/34afa386b7f6d8e6e9e7587a13070aa509465211))
+* **release:** 1.0.0-beta.0 ([77a95fd](https://github.com/Keylenn/cohookjs/commit/77a95fd6bc43bb5b67086f1613d248208f604b75))
+* **release:** 1.1.0-alpha.0 ([a535dbf](https://github.com/Keylenn/cohookjs/commit/a535dbfec64bb1ee5e14270f9e0dff30f373d602))
+
+### ♻️ Code Refactoring | 代码重构
+
+* add shareOption Api ([766826a](https://github.com/Keylenn/cohookjs/commit/766826a0783db2f90d7f3f5867e1192a968a79c6))
+
+## [1.2.0-alpha.0](https://github.com/Keylenn/cohookjs/compare/v1.0.0-beta.1...v1.1.0-alpha.1) (2021-10-23)
+
+### ✨ Features | 新功能
+
+* add share option ([cd3547d](https://github.com/Keylenn/cohookjs/commit/cd3547dc34cb1d7379e887b771b30a1bf029694d))
+
 ### 1.0.0 (2021-09-30)
 
 ### 💄 Styles | 风格

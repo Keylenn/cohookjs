@@ -1,6 +1,6 @@
 {
   "name": "@cohook/core",
-  "version": "1.0.0",
+  "version": "1.2.1",
   "description": "Framework-independent, lightweight, progressive, immutable data management",
   "author": "keylenn <darklight_on@163.com>",
   "homepage": "https://github.com/Keylenn/cohookjs/tree/master/packages/cohook-core#readme",
@@ -24,6 +24,7 @@
     "immer",
     "immutable",
     "container",
+    "share",
     "effect"
   ],
   "engines": {
@@ -36,8 +37,8 @@
     "lint": "eslint src --ext js,ts",
     "size": "size-limit",
     "analyze": "size-limit --why",
-    "release:alpha": "yarn build:check && standard-version --prerelease alpha && npm publish",
-    "release:beta": "yarn build:check && standard-version --prerelease beta && npm publish",
+    "release:alpha": "yarn build:check && standard-version --prerelease alpha && npm publish --tag alpha",
+    "release:beta": "yarn build:check && standard-version --prerelease beta && npm publish --tag beta",
     "release": "yarn build:check && standard-version && npm publish"
   },
   "publishConfig": {

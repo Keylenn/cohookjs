@@ -23,12 +23,14 @@ describe("createContainer", () => {
     const logArr: any[] = []
     const initialData: number[] = []
     const countContainer = createContainer(initialData, {
-      logger() {
-        this.tryToTrackEffect({
-          effectHook: (option) => {
-            logArr.push(option)
-          },
-        })
+      plugins: {
+        logger() {
+          this.tryToTrackEffect({
+            effectHook: (option) => {
+              logArr.push(option)
+            },
+          })
+        },
       },
     })
     countContainer.plugins.logger()
