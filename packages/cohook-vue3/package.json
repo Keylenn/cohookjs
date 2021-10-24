@@ -1,8 +1,8 @@
 {
   "name": "@cohook/vue3",
-  "version": "1.0.0-alpha.2",
+  "version": "1.0.0",
   "description": "Vue3 lightweight, progressive data caching and cross-component communication",
-  "author": "hejilun <darklight_on@163.com>",
+  "author": "Keylenn <darklight_on@163.com>",
   "homepage": "https://github.com/Keylenn/cohookjs/tree/master/packages/cohook-vue3#readme",
   "license": "MIT",
   "main": "dist/index.js",
@@ -36,9 +36,11 @@
     "lint": "eslint src --ext js,ts",
     "size": "size-limit",
     "analyze": "size-limit --why",
-    "release:alpha": "yarn build:check && standard-version --prerelease alpha && npm publish",
-    "release:beta": "yarn build:check && standard-version --prerelease beta && npm publish",
-    "release": "yarn build:check && standard-version && npm publish"
+    "release:alpha": "yarn build:check && standard-version --prerelease alpha && npm publish --tag alpha",
+    "release:beta": "yarn build:check && standard-version --prerelease beta && npm publish --tag beta",
+    "release": "yarn build:check && standard-version && npm publish",
+    "release:minor": "yarn build:check && standard-version -r minor && npm publish",
+    "release:major": "yarn build:check && standard-version -r major && npm publish"
   },
   "publishConfig": {
     "access": "public"
@@ -64,7 +66,7 @@
     "tsdx": "^0.14.1"
   },
   "dependencies": {
-    "@cohook/core": "^1.0.0",
+    "@cohook/core": "^1.2.1",
     "immer": "^9.0.6"
   },
   "peerDependencies": {

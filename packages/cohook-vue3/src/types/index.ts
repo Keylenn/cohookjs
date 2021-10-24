@@ -14,4 +14,10 @@ export interface Vue3Base<T> extends Base<T> {
   useMapDataToAccessor: UseMapDataToAccessorPlugin<T>
 }
 
-export { PluginContext, Plugins, TransformPlugins } from "@cohook/core"
+export type {
+  PluginContext,
+  Plugins,
+  TransformPlugins,
+  ShareOption,
+  PluginOption,
+} from "@cohook/core"
