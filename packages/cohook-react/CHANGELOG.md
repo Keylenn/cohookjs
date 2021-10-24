@@ -2,6 +2,42 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/Keylenn/cohookjs/compare/v1.1.0-beta.0...v1.1.0) (2021-10-24)
+
+
+### 🐛 Bug Fixes | Bug 修复
+
+* release v1 ([993f14a](https://github.com/Keylenn/cohookjs/commit/993f14ac522ee3b8fe651d0b969066f04291069c))
+
+
+### ✏️ Documentation | 文档
+
+* add case ([6095ce0](https://github.com/Keylenn/cohookjs/commit/6095ce0a106054083bbe48bd8fc7f2025cde1758))
+* update changelog ([3a850fa](https://github.com/Keylenn/cohookjs/commit/3a850fa0764842c52c84511e129e1daa9f8a28c6))
+
+
+### 🚀 Chore | 构建/工程依赖/工具
+
+* **release:** 1.0.1 ([e8c21bd](https://github.com/Keylenn/cohookjs/commit/e8c21bd3a15e1536f68340b365708827ac833522))
+
+
+### ✨ Features | 新功能
+
+* add share option ([3340158](https://github.com/Keylenn/cohookjs/commit/334015832c543a2bb194dfa18e3b74fee513b93e))
+
+### [1.0.1](https://github.com/Keylenn/cohookjs/compare/v1.1.0-beta.0...v1.0.1) (2021-10-09)
+
+
+### 🐛 Bug Fixes | Bug 修复
+
+* release v1 ([993f14a](https://github.com/Keylenn/cohookjs/commit/993f14ac522ee3b8fe651d0b969066f04291069c))
+
+
+### ✏️ Documentation | 文档
+
+* add case ([6095ce0](https://github.com/Keylenn/cohookjs/commit/6095ce0a106054083bbe48bd8fc7f2025cde1758))
+* update changelog ([3a850fa](https://github.com/Keylenn/cohookjs/commit/3a850fa0764842c52c84511e129e1daa9f8a28c6))
+
 ## [1.1.0-beta.0](https://github.com/Keylenn/cohookjs/compare/v0.9.10-alpha.0...v1.1.0-beta.0) (2021-09-25)
 
 
