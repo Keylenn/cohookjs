@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0-beta.0](https://github.com/Keylenn/cohookjs/compare/v1.0.0-alpha.2...v1.1.0-beta.0) (2021-10-24)
+
+
+### Features
+
+* add share option ([463db07](https://github.com/Keylenn/cohookjs/commit/463db07b9783b2d7e64044b84502476fe6421d4d))
+
 ## 1.0.0-alpha.2 (2021-10-10)
 
 
