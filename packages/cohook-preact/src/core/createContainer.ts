@@ -1,19 +1,36 @@
 import { default as createBaseContainer } from "@cohook/core"
 import useMapDataToStatePlugin from "./hooks/useMapDataToStatePlugin"
-import { PReactBase, Plugins, TransformPlugins } from "../types"
+import {
+  PReactBase,
+  PluginOption,
+  TransformPlugins,
+  ShareOption,
+} from "../types"
 
 export default function createContainer<T>(initialData: T): PReactBase<T>
-export default function createContainer<T, P extends Plugins<T>>(
+export default function createContainer<T, U extends ShareOption<T>>(
   initialData: T,
-  plugins: P
+  option: U
+): PReactBase<T>
+export default function createContainer<
+  T,
+  O extends ShareOption<T> & PluginOption<T>
+>(
+  initialData: T,
+  option: O
 ): PReactBase<T> & {
-  plugins: TransformPlugins<P>
+  plugins: TransformPlugins<O["plugins"]>
 }
-export default function createContainer(initialData: any, otherPlugins?: any) {
-  const { plugins, ...base } = createBaseContainer(initialData, {
-    useMapDataToStatePlugin,
-    ...otherPlugins,
+export default function createContainer(initialData: any, option?: any) {
+  const preactContainer: any = createBaseContainer(initialData, {
+    ...option,
+    plugins: {
+      useMapDataToStatePlugin,
+      ...option?.plugins,
+    },
   })
+
+  const { plugins, ...base } = preactContainer
 
   const { useMapDataToStatePlugin: useMapDataToState, ...restPlugins } = plugins
 
