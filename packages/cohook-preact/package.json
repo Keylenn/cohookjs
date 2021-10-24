@@ -1,6 +1,6 @@
 {
   "name": "@cohook/preact",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "preact lightweight, progressive data caching and cross-component communication",
   "author": "Keylenn <darklight_on@163.com>",
   "homepage": "https://github.com/Keylenn/cohookjs/tree/master/packages/cohook-preact#readme",
@@ -37,9 +37,11 @@
     "lint": "eslint src --ext js,ts",
     "size": "size-limit",
     "analyze": "size-limit --why",
-    "release:alpha": "yarn build:check && standard-version --prerelease alpha && npm publish",
-    "release:beta": "yarn build:check && standard-version --prerelease beta && npm publish",
-    "release": "yarn build:check && standard-version && npm publish"
+    "release:alpha": "yarn build:check && standard-version --prerelease alpha && npm publish --tag alpha",
+    "release:beta": "yarn build:check && standard-version --prerelease beta && npm publish --tag beta",
+    "release": "yarn build:check && standard-version && npm publish",
+    "release:minor": "yarn build:check && standard-version -r minor && npm publish",
+    "release:major": "yarn build:check && standard-version -r major && npm publish"
   },
   "publishConfig": {
     "access": "public"
