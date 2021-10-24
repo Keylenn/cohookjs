@@ -50,8 +50,8 @@ function Counter() {
 
 ## 💡API
 
-### ```createContainer(initialData [, pluginsOption])```
-createContainer作为容器工厂函数，接收初始数据`initialData`和可选的插件配置[`pluginsOption 👉`](https://github.com/Keylenn/cohookjs/blob/master/packages/cohook-core/README.md#pluginsoption)，返回一个容器对象[`container`](#container)。
+### ```createContainer(initialData [, option])```
+createContainer作为容器工厂函数，接收初始数据`initialData`和可选的插件和共享等配置[`option 👉`](https://github.com/Keylenn/cohookjs/blob/master/packages/cohook-core/README.md#createcontainerinitialdata--option)，返回一个容器对象[`container`](#container)。
 
 #### `container`
 
