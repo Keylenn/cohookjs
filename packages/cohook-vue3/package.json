@@ -1,18 +1,15 @@
 {
   "name": "@cohook/vue3",
-  "version": "1.0.0",
+  "version": "1.1.0-beta.0",
   "description": "Vue3 lightweight, progressive data caching and cross-component communication",
-  "author": "keylenn <darklight_on@163.com>",
+  "author": "Keylenn <darklight_on@163.com>",
   "homepage": "https://github.com/Keylenn/cohookjs/tree/master/packages/cohook-vue3#readme",
   "license": "MIT",
   "main": "dist/index.js",
   "umd:main": "dist/vue3.umd.production.min.js",
   "unpkg": "dist/vue3.umd.production.min.js",
-  "jsdelivr": "dist/vue3.umd.production.min.js",
-  "jsnext:main": "dist/vue3.esm.production.min.js",
   "module": "dist/vue3.esm.js",
   "types": "dist/index.d.ts",
-  "sideEffects": false,
   "files": [
     "src",
     "dist"
@@ -22,8 +19,9 @@
     "url": "git+https://github.com/Keylenn/cohookjs.git"
   },
   "keywords": [
-    "Vue3",
+    "vue3",
     "cohook",
+    "immer",
     "immutable",
     "container",
     "effect"
@@ -38,9 +36,11 @@
     "lint": "eslint src --ext js,ts",
     "size": "size-limit",
     "analyze": "size-limit --why",
-    "release:alpha": "yarn build:check && standard-version --prerelease alpha && npm publish",
-    "release:beta": "yarn build:check && standard-version --prerelease beta && npm publish",
-    "release": "yarn build:check && standard-version && npm publish"
+    "release:alpha": "yarn build:check && standard-version --prerelease alpha && npm publish --tag alpha",
+    "release:beta": "yarn build:check && standard-version --prerelease beta && npm publish --tag beta",
+    "release": "yarn build:check && standard-version && npm publish",
+    "release:minor": "yarn build:check && standard-version -r minor && npm publish",
+    "release:major": "yarn build:check && standard-version -r major && npm publish"
   },
   "publishConfig": {
     "access": "public"
@@ -59,14 +59,15 @@
     }
   ],
   "devDependencies": {
+    "vue": "3.0.4",
     "@size-limit/preset-small-lib": "^5.0.4",
     "size-limit": "^5.0.4",
     "standard-version": "^9.3.1",
-    "tsdx": "^0.14.1",
-    "vue": "3.0.4"
+    "tsdx": "^0.14.1"
   },
   "dependencies": {
-    "@cohook/core": "^1.0.0-beta.1"
+    "@cohook/core": "^1.2.1",
+    "immer": "^9.0.6"
   },
   "peerDependencies": {
     "vue": "^3"
