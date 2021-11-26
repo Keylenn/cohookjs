@@ -36,7 +36,6 @@ export default function createTrackableData<T extends AnyObj>(
           [prop](...params: any[]) {
             const rawTarget = PROXY_2_ROW.get(this)
             const value = rawTarget?.[prop]?.(...params) ?? rawTarget?.[prop]
-            console.log(2222, value)
             return tryToTrackReturnVal(value)
           },
         }
